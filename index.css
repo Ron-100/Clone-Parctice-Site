@@ -39,5 +39,7 @@
     #container{
         width: 98%;
         height: 80%;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(auto,400px);
     }
 }
