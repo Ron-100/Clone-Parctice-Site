@@ -658,6 +658,30 @@ nav a:hover{
 
 
 
+@media screen and (max-width:1064px) {
+    #bx1{
+        width: 146px;
+    }
+
+    #bx1 img{
+        width: 50px;
+    }
+
+    #bx1 h4{
+        font-size: 16px;
+    }
+    #bx1 p{
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+
+
 @media screen and (max-width:760px) {
 
     #wcu{
