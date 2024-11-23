@@ -659,12 +659,8 @@ nav a:hover{
 
 
 @media screen and (max-width:1064px) {
-    #bx1{
-        width: 146px;
-    }
-
     #bx1 img{
-        width: 50px;
+        width: 60px;
     }
 
     #bx1 h4{
