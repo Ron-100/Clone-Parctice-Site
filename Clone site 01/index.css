@@ -1184,6 +1184,7 @@ textarea::placeholder{
     justify-content: center;
     align-items: center;
     gap: 40px;
+    position: relative;
 }
 
 #text,#email,#text2{
@@ -1192,6 +1193,14 @@ textarea::placeholder{
     border: none;
 }
 
+#emailCheck{
+    display: none;
+    position: absolute;
+    font-size: 12px;
+    bottom: -24px;
+    right: 60px;
+    color: red;
+}
 #textarea{
     padding-left: 40px;
     padding-top: 20px;
