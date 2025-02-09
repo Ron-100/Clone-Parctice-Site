@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* dsp1 start */
+.dsp1{
+    background-image: url(./stuff/buildings.jpg),linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5));
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    max-width: 100%;
+    height: 100dvh;
+    position: relative;
+}
+
+.header{
+    margin: 0 auto;
+    max-width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: min(2rem, 8%);
+}
+
+.icon{
+    width: fit-content;
+    height: fit-content;
+}
+.icon a{
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+}
+
+.otherSide{
+    width: fit-content;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.otherSide a{
+    font-size: 17px;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+}
+.otherSide img{
+    width: 38px;
+    transform: rotate(180deg);
+    cursor: pointer;
+    z-index: 3;
+}
+
+
+.text{
+    /* background-color: brown; */
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 40px;
+    /* background: green; */
+    margin-left: 9em;
+    margin-top: 50px;
+    width: 400px;
+}
+
+
+.text h1{
+    line-height: 80px;
+    font-size: clamp(3em,4vw,4.375em);
+    text-transform: uppercase;
+    color: white;
+}
+.text p{
+    font-size: 17px;
+    color: white;
+    line-height: 20px;
+}
+.text button{
+    font-size: 15px;
+    width: 150px;
+    height: 40px;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.text button:hover{
+   background-color: transparent;
+   border: 1px solid white;
+   color: white;
+}
+
+
+
+
+
+.menu{
+    background-color: rgba(0, 0, 0, 0.8);
+    /* clip-path: polygon(0 0, 100% 0%, 100% 100%, 24% 100%); */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    /* visibility: hidden;  */
+    /* opacity: 0;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in;
+    /* transition: opacity 0.3s ease-in-out, visibility 0.3s;  */
+    z-index: 2;
+}
+
+
+
+.options{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.options a{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+}
+
+
+
+
+
+
+
+@media (max-width: 700px) {   
+    .header{
+        padding: min(1rem, 8%);
+    }
+    .otherSide {
+        gap: 15px;
+    }
+    .otherSide img {
+        width: 24px;
+    }
+    .text-box {
+        margin-left: 0em;
+        width: 100%;
+        padding: 10px;
+    }
+    .text h1 {
+        line-height: 60px;
+    }
+}
+
+
+/* dsp1 end */
+
+
+/* Customer-Review start */
+
+
+
+.dsp0{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 18px;
+}
+.dsp0 h2{
+    font-size: clamp(1em, 6vw , 2.5em);
+}
+
+swiper-container {
+    width: 90%;
+    height: 45%;
+    border: 1px solid black;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: min(10em, 8%);
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.boxtxt{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.boxtxt h4{
+    font-size: clamp(1em, 5vw ,1.75em);
+}
+.boxtxt p{
+    font-size: 15px;
+    text-align: left;
+}
+
+/* @media (min-width: 768px) and (max-width: 1024px) {
+    
+} */
+
+
+@media screen and (max-width:960px) {
+    .dsp0 {
+        height: 80vh;
+        padding: min(1.5em, 8%);
+    }
+
+    .img {
+        width: 150px;
+        height: 140px;
+    }
+
+    swiper-container {
+        height: 100%;
+    }
+    
+    .boxtxt p{
+        margin: 2px;
+    }
+
+    .box{
+        flex-direction: column;
+    }
+}
+
+
+/* Customer-Review end */
+
+
+
+
+/* dsp2 start */
+
+.dsp2{
+    width: 100%;
+    height: 75vh;
+}
+
+.dsp02{
+    margin: 0 auto;
+    max-width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dsp2-img{
+    width: 50%;
+    height: 400px;
+}
+.dsp2-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.dsp2txt{
+    width: 50%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding: min(2em,5%);
+    gap: 20px;
+}
+
+.dsp2txt h2{
+    font-size: clamp(1em, 6vw , 2.375em);
+    font-weight: 900;
+}
+.dsp2txt p{
+    font-size:clamp(0.4em, 3.8vw , 1.063em);
+    font-weight: 100;
+}
+.dsp2txt button{
+    font-size:17px;
+    width: 150px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.dsp2txt button:hover{
+    background-color: black;
+    color: white;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .dsp02 {
+        max-width: 95%;
+    }
+    .dsp2-img {
+        height: 250px;
+    }
+    .dsp2 {
+        height: 40vh;
+    }
+}
+@media (max-width: 768px){
+    .dsp02 {
+        flex-direction: column;
+    }
+    .dsp2-img {
+        width: 100%;
+        height: auto;
+    }
+    .dsp2txt {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 769px) {
+    .dsp2 {
+        height: 78vh;
+    }   
+}
+
+
+
+
+
+
+
+/* dsp2 end */
