@@ -168,7 +168,7 @@
     .text-box {
         margin-left: 0em;
         width: 100%;
-        padding: 10px;
+        padding: 0 15px 0 15px;
     }
     .text h1 {
         line-height: 60px;
