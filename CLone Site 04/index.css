@@ -115,12 +115,12 @@
 
 .menu{
     background-color: rgba(0, 0, 0, 0.8);
-    /* clip-path: polygon(0 0, 100% 0%, 100% 100%, 24% 100%); */
-    width: 100%;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 24% 100%);
+    width: 40%;
     height: 100%;
     position: fixed;
     top: 0;
-    left: -100%;
+    right: -40%;
     /* visibility: hidden;  */
     /* opacity: 0;  */
     display: flex;
@@ -145,7 +145,7 @@
 
 .options a{
     text-decoration: none;
-    font-size: 25px;
+    font-size: clamp(0.7em,4vw,1.563em);
     color: white;
 }
 

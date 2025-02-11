@@ -1,14 +1,19 @@
 const menuBtn = document.querySelector(".menu-btn");
 const menu = document.querySelector('.menu');
+const otherSide =document.querySelector('.otherSide')
 
+let div = document.createElement('div')
+div.style.width = '38px'
 menuBtn.addEventListener('click', function () {
-    if (menu.style.left == "-100%" || menu.style.left == "" ) {
-        menu.style.left = "0%"
+    if (menu.style.right == "-40%" || menu.style.right == "" ) {
+        menu.style.right = "0%"
         menuBtn.style.position= 'fixed'
         menuBtn.style.right= '32px'
+        otherSide.appendChild(div)
     } else {
-        menuBtn.style.position= 'static'
-        menu.style.left = "-100%"
+        menuBtn.style.position = 'static'
+        menu.style.right = "-40%"
+        otherSide.removeChild(div)
     }
 });
 
