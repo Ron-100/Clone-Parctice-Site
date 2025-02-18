@@ -1,0 +1,611 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    transition: all 1s;
+    z-index: 1;
+}
+
+.options{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: clamp(0.2em,5vw,3em);
+}
+
+.options a{
+    text-decoration: none;
+    color: wheat;
+    font-size: clamp(0.5em,5vw,1.7em);
+    position: relative;
+}
+
+.options a::after{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: wheat;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.options a:hover::after{
+    opacity: 1;
+}
+
+.options a.active::after {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.sec1{
+    width: 100%;
+    height: 120vh;
+    background-image: url(./stuff/p6.jpg),linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.0));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.box1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: min(25em, 80%);
+    height: min(12em, 80%);
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.808);
+}
+
+.box1 h1{
+    font-size: clamp(2.1em,5vw,2.5em);
+    color: white;
+}
+.box1 p{
+    font-size: clamp(1em,5vw,1.2em);
+    color: wheat;
+}
+
+.box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min(25em, 80%);
+    height: min(11em, 30%);
+    padding: min(2em,8%);
+    background-color: rgba(0, 0, 0, 0.808);
+}
+
+.box2 p{
+    line-height: 25px;
+    color: white;
+}
+
+.box3{
+    background-color: rgba(0, 0, 0, 0.808);
+    width: min(12em , 80%);
+    height: min(4.5em, 80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.box3 a{
+    text-decoration: none;
+    color: wheat;
+    font-size: clamp(1em,2.5vw,1.2em);
+    transition: all 0.2s;
+}
+
+.box3:hover a{
+    color: white;
+}
+
+
+.sec2{
+    width: 100%;
+    height: 120vh;
+    background-image: url(./stuff/p1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+}
+
+.sec2 section{
+    width: 320px;
+    height: 80px;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 35px;
+    color: #544639;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ani-menu{
+    position: relative;
+    animation: fade;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fade {
+    from{
+        opacity: 0%;
+        top: 30px;
+    }
+
+    to{
+        opacity: 100%;
+        top: 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.whole-cage{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+.cage{
+    width: 30%;
+    height: 100%;
+    background-color: wheat;
+    border-radius: 10px;
+    position: static;
+    top: 50px;
+    /* animation: apper 5s linear;
+    animation-timeline: view();
+    animation-range:entry 0% cover 20% ; */
+}
+/* 
+@keyframes apper {
+    from{
+        opacity: 0;
+        scale: 0.4;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+} */
+
+.ani-cage{
+    opacity: 0;
+    animation: foodcage;
+    animation-duration: 0.5s;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes foodcage{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+
+
+#cage1{
+    left: 17em;
+}
+#cage2{
+    right: 17em;
+}
+
+
+.secA{
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secA1{
+    width: 50%;
+    height: 100%;
+    background-image: url(./stuff/p2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.secA2{
+    width: 50%;
+    height: 100%;
+    background-image: url(./stuff/p3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    position: relative;
+}
+
+.align-about{
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    right: 140px;
+}
+
+
+
+.ani-about{
+    animation: leftfade;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+@keyframes leftfade {
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+
+
+
+
+
+.about{
+    width:100%;
+    height: 400px;
+    /* width: min(30em,50%);
+    height: min(14em,18%); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    padding: min(2em,5%);
+    border-radius: 15px;
+    background-color: aliceblue;
+}
+
+.about p:nth-child(1){
+    font-size: 40px;
+    color: #006666;
+}
+.about p:nth-child(2){
+    font-size: 18px;
+    line-height: 30px;
+    color: #787878;
+}
+.about p:nth-child(3){
+    font-size: 18px;
+    line-height: 30px;
+    color: #787878;
+}
+
+.contactus{
+    width: 200px;
+    height: 55px;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #006666;
+    background-color: #006666;
+    cursor: pointer;
+}
+.contactus:hover{
+    border: 1px solid #168686;
+    background-color: #168686;
+}
+
+
+
+
+.secB{
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.secB1{
+    width: 50%;
+    height: 100%;
+    background-image: url(./stuff/p4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: min(2em,8%);
+}
+
+.contactUs{
+    width: 500px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.656);
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    gap: 30px;
+    padding: min(2.2em,8%);
+    border-radius: 12px;
+    opacity: 0;
+}
+
+.contactUs p:nth-child(1){
+    font-size: 35px;
+    color: #006666;
+}
+.contactUs p:nth-child(2){
+    font-size: 20px;
+    line-height: 30px;
+}
+.contactUs p:nth-child(3){
+    font-size: 20px;
+    cursor: pointer;
+}
+.contactUs p:nth-child(4){
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+.secB2{
+    width: 50%;
+    height: 100%;
+    background-image: url(./stuff/p5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: min(2em,8%);
+}
+
+form{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #000000b3;
+    padding: min(2.2em,8%);
+    border-radius: 12px;
+    opacity: 0;
+    position: relative;
+}
+
+input{
+    width: 90%;
+    height: 60px;
+    font-size: 20px; 
+    background-color: transparent;
+    border: none;
+    border-bottom:1px solid wheat ;
+    color: wheat;
+}
+
+input::placeholder{
+    color: wheat;
+}
+
+textarea{
+    width: 90%;
+    height: 50%;
+    font-size: 20px;
+    padding-top: 1em;
+    background-color: transparent;
+    border:none;
+    border-bottom:1px solid wheat ;
+    color: wheat;
+}
+
+textarea::placeholder{
+    color: wheat;
+}
+
+#mailCheck{
+    display: none;
+    position: absolute;
+    font-size: 12px;
+    top: 205px;
+    left: 58px;
+    color: red;
+}
+
+
+
+.ani-sec{
+    /* position: relative; */
+    animation: slide;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    opacity: 0;
+}
+
+@keyframes slide {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1024px) {
+    .secB{
+        flex-direction: column;
+    }
+
+    .secB1{
+        width: 100%;
+        justify-content: center;
+    }
+    .secB2{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:500px) and (max-width:1290px) {
+
+    .sec2{
+        gap: 20px;
+    }
+
+    .secA {
+        width: 100%;
+        height: 70vh;
+    }
+
+    .whole-cage{
+        flex-direction: column;
+        height: 80%;
+    }
+
+    .whole-cage .cage{
+        width: 40%;
+        height: 100%;
+    }
+}
+
+@media (max-width:500px){
+
+    .sec2{
+        gap: 20px;
+    }
+
+    .whole-cage{
+        flex-direction: column;
+        height: 80%;
+        gap: 20px;
+    }
+
+    .whole-cage .cage{
+        width: 80%;
+        height: 100%;
+    }
+
+    .align-about {
+        width: 375px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        right: 0px;
+        padding: 10px;
+    }
+}
+
+
