@@ -3,7 +3,37 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
 }
+
+
+.up-btn{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 5;
+    transition: 0.8s;
+    opacity: 0;
+}
+
+#up-btn{
+    text-decoration: none;
+    padding: 12px 14px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #FFA500;
+    color: white;
+}
+.up-hide{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 5;
+    transition: opacity 0.8s ease-in-out;
+    opacity: 1;
+}
+
 
 .navigation{
     width: 100%;
@@ -409,7 +439,7 @@
     color: #FFA500;
 }
 .text-side p:nth-child(2){
-    font-size: clamp(2.2em, 5vw, 2.9em);
+    font-size: clamp(2em, 5vw, 2.9em);
     font-weight: 600;
 }
 .text-side p:nth-child(3){
@@ -430,7 +460,7 @@
 
 .room,.staffs,.clients{
     width: 100%;
-    height: 70%;
+    height: 80%;
     border: 1px solid #ccd2d7;
     border-radius: 5px;
     display: flex;
@@ -447,28 +477,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     background-color: white;
 }
 
 .hotl-info{
-    width: 2.5em;
+    width: clamp(1.9em,5vw,2.5em);
 }
 
-.room-border p:nth-child(1),.staffs-border p:nth-child(1),.clients-border p:nth-child(1) {
+.room-border .num, .staffs-border .num, .clients-border .num{
     font-size: clamp(1em, 5vw, 2.2em);
     color: black;
 }
-.room-border p:nth-child(2),.staffs-border p:nth-child(2),.clients-border p:nth-child(2) {
-    /* font-size: 50px;
+.room-border h7,.staffs-border h7,.clients-border h7 {
+    font-size: clamp(1em, 5vw, 1.5em);
     font-weight: 100;
-    color: #757575; */
-    font-size: clamp(1em, 5vw, 1.8em);
-    font-weight: 600;
-    color: #000000;
+    color: #757575;
 }
-
-
 
 
 .text-side button {
@@ -655,3 +680,41 @@
 }
 
 /* about section */
+
+
+
+/* Explore Our Rooms */
+
+.ex-plor-room{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #757575;
+}
+
+.section-name{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-name p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFA500;
+}
+
+.section-name h4{
+    font-size: clamp(2em, 5vw, 2.9em);
+    font-weight: 600;
+}
+
+
+
+/* Explore Our Rooms */

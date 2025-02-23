@@ -1,3 +1,29 @@
+// when reload the page it will get start form the top
+window.onload = function () {
+    window.scrollTo(0, 0);
+};
+// when reload the page it will get start form the top
+
+
+
+// up button
+
+document.addEventListener('DOMContentLoaded',function(){
+    let upBtn = document.querySelector('.up-btn')
+    window.addEventListener('scroll',function(){
+        if (window.scrollY > 176) {
+            upBtn.classList.replace('up-btn','up-hide');
+        }else{
+            upBtn.classList.replace('up-hide','up-btn')
+        }
+    })
+})
+
+// up button
+
+
+
+
 // menu
 document.addEventListener('DOMContentLoaded',function(){
     let menuBtn = document.querySelector('.toggle-menu')
@@ -73,13 +99,20 @@ document.addEventListener('DOMContentLoaded',function(){
     let img2 = document.querySelector('.img2');
     let img3 = document.querySelector('.img3');
     let img4 = document.querySelector('.img4');
+
+    let imageSide = document.querySelector('.image-side');
+    let started = false;
+
     window.addEventListener('scroll',function(){
-        
-        if (window.scrollY >= 400) {
-            img1.classList.add('img1-anim')
-            img2.classList.add('img2-anim')
-            img3.classList.add('img3-anim')
-            img4.classList.add('img4-anim')
+        if (!started) {
+            let elementPosition = imageSide.getBoundingClientRect();
+            let windowHeight = window.innerHeight;
+            if (windowHeight >= elementPosition.top) {
+                img1.classList.add('img1-anim')
+                img2.classList.add('img2-anim')
+                img3.classList.add('img3-anim')
+                img4.classList.add('img4-anim')
+            }
         }
     })
 })
