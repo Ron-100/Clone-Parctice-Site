@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
     window.addEventListener('scroll',function(){
         if (!started) {
-            let elementPosition = imageSide.getBoundingClientRect();
+            let elementPosition = img2.getBoundingClientRect();
             let windowHeight = window.innerHeight;
             if (windowHeight >= elementPosition.top) {
                 img1.classList.add('img1-anim')
@@ -119,15 +119,17 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 
+// manage details
+
 document.addEventListener('DOMContentLoaded',function(){
     let valueDisplays = document.querySelectorAll(".num");
     let tillTime = 4000;
     let started = false;
 
     window.addEventListener('scroll',function(){
-
+        
         if (!started){
-
+            
             valueDisplays.forEach((valueDisplay) => {
 
                 let elementPosition = valueDisplay.getBoundingClientRect();
@@ -155,3 +157,30 @@ document.addEventListener('DOMContentLoaded',function(){
 
 })
 
+// manage details
+
+
+// room logs
+
+document.addEventListener('DOMContentLoaded',function(){
+    let roomLogs = document.querySelector('.room-logs')
+    let roomA = document.querySelector('.roomA')
+    let roomB = document.querySelector('.roomB')
+    let roomC = document.querySelector('.roomC')
+
+    let started = false;
+    window.addEventListener('scroll',function(){
+        if (!started) {
+            let elementPosition = roomLogs.getBoundingClientRect();
+            let windowHeight = window.innerHeight;
+            if (windowHeight > elementPosition.top) {
+                started = true;
+                roomA.classList.add('room1-ani')
+                roomB.classList.add('room2-ani')
+                roomC.classList.add('room3-ani')
+            }
+        }
+    })
+})
+
+// room logs
