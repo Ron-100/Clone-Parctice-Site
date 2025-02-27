@@ -77,14 +77,14 @@ document.addEventListener('DOMContentLoaded',function(){
 // banner
 document.addEventListener('DOMContentLoaded',function(){
     let requiredInfo = document.querySelector('.required-info')
-    window.addEventListener('scroll', function(){
-        if (window.scrollY >= 40) {
-            requiredInfo.classList.add('required-infoAnimate')
-        }
-    })
-    
-    if(window.innerHeight < 729){
-        requiredInfo.classList.add('required-infoAnimate')
+    if(window.innerHeight > requiredInfo.getBoundingClientRect().top){
+        requiredInfo.classList.add('required-infoAnimate');
+    }else{
+        window.addEventListener('scroll', function(){
+            if (window.scrollY >= 40) {
+                requiredInfo.classList.add('required-infoAnimate')
+            }
+        })
     }
 })
 
@@ -102,19 +102,25 @@ document.addEventListener('DOMContentLoaded',function(){
 
     let imageSide = document.querySelector('.image-side');
     let started = false;
-
-    window.addEventListener('scroll',function(){
-        if (!started) {
-            let elementPosition = img2.getBoundingClientRect();
-            let windowHeight = window.innerHeight;
-            if (windowHeight >= elementPosition.top) {
-                img1.classList.add('img1-anim')
-                img2.classList.add('img2-anim')
-                img3.classList.add('img3-anim')
-                img4.classList.add('img4-anim')
+    if(window.innerHeight > img2.getBoundingClientRect().top){
+        img1.classList.add('img1-anim')
+        img2.classList.add('img2-anim')
+        img3.classList.add('img3-anim')
+        img4.classList.add('img4-anim')
+    }else{
+        window.addEventListener('scroll',function(){
+            if (!started) {
+                let elementPosition = img2.getBoundingClientRect();
+                let windowHeight = window.innerHeight;
+                if (windowHeight >= elementPosition.top) {
+                    img1.classList.add('img1-anim')
+                    img2.classList.add('img2-anim')
+                    img3.classList.add('img3-anim')
+                    img4.classList.add('img4-anim')
+                }
             }
-        }
-    })
+        })
+    }
 })
 
 
@@ -122,38 +128,60 @@ document.addEventListener('DOMContentLoaded',function(){
 // manage details
 
 document.addEventListener('DOMContentLoaded',function(){
+    let manageDetails = document.querySelector('.manage-details');
     let valueDisplays = document.querySelectorAll(".num");
     let tillTime = 4000;
     let started = false;
+    if(window.innerHeight > manageDetails.getBoundingClientRect().top){
+        valueDisplays.forEach((valueDisplay) => {
+    
+            let elementPosition = valueDisplay.getBoundingClientRect();
+            let windowHeight = window.innerHeight;
 
-    window.addEventListener('scroll',function(){
+            if(windowHeight >= elementPosition.top){
+                let startValue = 0;
+                let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+                let duration = Math.floor(tillTime / endValue);
         
-        if (!started){
+                let counter = setInterval(function () {
+                    startValue = startValue + 2;
+                    valueDisplay.textContent = startValue;
+                    if (startValue == endValue) {
+                    clearInterval(counter);
+                    }
+                },duration);
+            }
+        });
+    }else{
+        window.addEventListener('scroll',function(){
             
-            valueDisplays.forEach((valueDisplay) => {
-
-                let elementPosition = valueDisplay.getBoundingClientRect();
-                let windowHeight = window.innerHeight;
-
-                if(windowHeight >= elementPosition.top){
-
-                    started = true;
-
-                    let startValue = 0;
-                    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-                    let duration = Math.floor(tillTime / endValue);
-            
-                    let counter = setInterval(function () {
-                        startValue = startValue + 2;
-                        valueDisplay.textContent = startValue;
-                        if (startValue == endValue) {
-                        clearInterval(counter);
-                        }
-                    },duration);
-                }
-            });
-        }
-    })
+            if (!started){
+                
+                valueDisplays.forEach((valueDisplay) => {
+    
+                    let elementPosition = valueDisplay.getBoundingClientRect();
+                    let windowHeight = window.innerHeight;
+    
+                    if(windowHeight >= elementPosition.top){
+    
+                        started = true;
+    
+                        let startValue = 0;
+                        let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+                        let duration = Math.floor(tillTime / endValue);
+                
+                        let counter = setInterval(function () {
+                            startValue = startValue + 2;
+                            valueDisplay.textContent = startValue;
+                            if (startValue == endValue) {
+                            clearInterval(counter);
+                            }
+                        },duration);
+                    }
+                });
+            }
+        })
+    }
 
 })
 
