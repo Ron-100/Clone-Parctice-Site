@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded',function(){
 // ikib animation
 
 document.addEventListener('DOMContentLoaded',function(){
-    let ikib = document.querySelector('.name p');
+    let ikib = document.querySelector('.name a');
     let started = false;
     
     function ikibSlide(){
@@ -31,6 +31,10 @@ document.addEventListener('DOMContentLoaded',function(){
         }
     }
     window.addEventListener('scroll',ikibSlide)
+
+    ikib.addEventListener('click',function(){
+        window.scrollTo(0, 0);
+    })
 })
 
 // ikib animation
@@ -66,7 +70,7 @@ document.addEventListener('DOMContentLoaded',function(){
 // page marker
 
 document.addEventListener('DOMContentLoaded',function(){
-    let pages = document.querySelectorAll('.home, .intro2, .about, .services, .team, .history, .works, .contact');
+    let pages = document.querySelectorAll('.home, .first-bdyimg, .about, .services, .team, .history, .works, .contact');
     let navLinks = document.querySelectorAll('.nav ul li');
     
     function activePage(){
@@ -101,7 +105,7 @@ document.addEventListener('DOMContentLoaded',function(){
     let inrSqr = document.querySelector('.inr-sqr')
     let inrSqrP = document.querySelector('.inr-sqr p')
     let started = false;
-
+    
     window.addEventListener('scroll',function(){
         let elementPosition = inrSqr.getBoundingClientRect().top;
         let windowHeight = window.innerHeight;
@@ -111,8 +115,40 @@ document.addEventListener('DOMContentLoaded',function(){
             rSqu.classList.add('r-squani')
             inrSqr.classList.add('inr-sqrani')
             inrSqrP.classList.add('inr-sqraniT')
+            
+            setTimeout(function(){
+                rSqu.style.boxShadow = '10px 10px 0px rgb(192, 192, 192)';
+                rSqu.style.transition = 'all 2s';
+            },1000)
         }
     })
 })
 
 // home page animation
+
+
+// first body Image
+
+document.addEventListener('DOMContentLoaded',function(){
+    let firstBdyImg = document.querySelector('.first-bdyimg');
+    let spanTag = document.querySelectorAll('.first-bdyimg p span');
+    let started = false;
+
+    function addColr(){
+        let elementPosition = firstBdyImg.getBoundingClientRect().top;
+        let windowHeight = window.innerHeight;
+        if(windowHeight > elementPosition && !started){
+            started = true;
+            setTimeout(function(){
+                spanTag.forEach(function(colorTag){
+                    colorTag.classList.add('addtxtcolr')
+                })
+            },1000)
+        }
+    }
+
+    window.addEventListener('scroll',addColr)
+    
+})
+
+// first body Image
