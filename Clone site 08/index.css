@@ -634,7 +634,7 @@ ul li.active::after{
 
 .first-bdyimg{
     width: 100%;
-    height: 55vh;
+    height: 24em;
     background-image: url(./stuff/workgrup.jpg),linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
     background-position: center;
     background-size: cover;
@@ -688,6 +688,222 @@ ul li.active::after{
 
 
 
+/*services */
+
+.services{
+    width: 100%;
+    height: 50em;
+    background-color: #F6F6F6;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+.options{
+    width: 70em;   
+    height: 10em;
+    display: grid;
+    background-color: #ffffff;
+    grid-template-columns: repeat(5,1fr);
+    justify-items: center;    
+    align-items: center;
+    padding: min(0.1em,5%);
+    border-radius: 10px;
+    border-bottom: 2.5px solid #196FC2;
+}
+
+.box1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius:0 0 10px 10px;
+}
+.box1 img{
+    width: 25px;
+    height: auto;
+    transition: all 0.2s;
+    background-color: rgb(255, 255, 255);
+    padding: 2px;
+}
+.box1 p{
+    font-size: clamp(0.5em,1.5vw,0.9em);
+    text-align: center;
+    transition: all 0.2s;
+}
+.box1:hover img{
+    transform: scale(2.8);
+}
+.box1:hover p{
+    display: none;
+}
+
+.box1.active img{
+    transform: scale(2.8);
+}
+
+.box1.active p{
+    display: none;
+}
+
+.op-contnt-warp{
+    width: 70em;
+    height: 22em;
+    padding: 5px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.all-contents-js{
+    width: auto;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0em;
+    transition: all 1s;
+}
+
+.op-contents{
+    width: 70em;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-box{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 28px;
+    padding: min(1.5em,5%);
+}
+
+.left-box p:nth-child(1){
+    font-size: 1.8em;
+    color: rgb(70, 70, 70);
+}
+.left-box p:nth-child(2){
+    font-size: 15px;
+    text-align: justify;
+    color: #6a6a6a;
+}
+
+.right-box{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(94, 94, 94);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+@media screen and (max-width: 1200px){
+    .options {
+        width: 56em;   
+    }
+
+    .op-contnt-warp{
+        width: 56em; 
+    }
+    .op-contents{
+        width: 56em; 
+    }
+    
+}
+@media screen and (max-width: 986px){
+    .options {
+        width: 50em;   
+    }
+    .op-contnt-warp{
+        width: 50em; 
+    }
+    .op-contents{
+        width: 50em; 
+    }
+}
+@media (min-width:768px) and (max-width: 870px){
+    .options {
+        width: 45em;   
+    }
+    .op-contnt-warp{
+        width: 45em; 
+    }
+    .op-contents{
+        width: 45em; 
+    }
+    
+}
+@media screen and (max-width: 767px){
+    .options {
+        width: min(80%,30em);   
+        height: 4em;
+    }
+    .op-contnt-warp{ 
+        width: 22em;   
+        height: 100%;
+    }
+
+    .op-contents{
+        width: 22em;   
+        height: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .left-box{
+        width: 90%;
+        height: 50%;
+    }
+    .left-box p:nth-child(2) {
+        font-size: 14px;
+    }
+    .right-box{
+        width: 90%;
+        height: 40%;
+    }
+    
+    .box1.active img{
+        transform: scale(1.4);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*services */
+
+
 .intro2{
     width: 100%;
     height: 40em;
@@ -700,14 +916,6 @@ ul li.active::after{
     width: 100%;
     height: 40em;
     background-color:white;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-}
-.services{
-    width: 100%;
-    height: 40em;
-    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: start;

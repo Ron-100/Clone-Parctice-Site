@@ -130,12 +130,11 @@ document.addEventListener('DOMContentLoaded',function(){
 // first body Image
 
 document.addEventListener('DOMContentLoaded',function(){
-    let firstBdyImg = document.querySelector('.first-bdyimg');
     let spanTag = document.querySelectorAll('.first-bdyimg p span');
     let started = false;
 
     function addColr(){
-        let elementPosition = firstBdyImg.getBoundingClientRect().top;
+        let elementPosition = spanTag[0].getBoundingClientRect().top;
         let windowHeight = window.innerHeight;
         if(windowHeight > elementPosition && !started){
             started = true;
@@ -152,3 +151,68 @@ document.addEventListener('DOMContentLoaded',function(){
 })
 
 // first body Image
+
+
+// services 
+// understand it
+
+document.addEventListener('DOMContentLoaded', function () {
+    const options = document.querySelectorAll('.box1');
+    const ltoR = document.querySelector('.all-contents-js');
+
+    // section-Mark
+
+    function mark(index) {
+        options.forEach(op => op.classList.remove('active')); // Remove 'active' from all
+        options[index].classList.add('active'); // Add 'active' to clicked one
+    }
+    
+    // Attach event listeners to each `.box1`
+    options.forEach((option, index) => {
+        option.addEventListener('click', function () {
+            mark(index); // Update active class
+        });
+    });
+
+    // section-Mark
+
+
+    function getPositionValues() {
+        let width = window.innerWidth;
+
+        if (width > 1200) {
+            return [0, -70, -140, -210, -280];
+        } else if (width >= 986) {
+            return [0, -56, -112, -168, -224];
+        } else if (width >= 870) {
+            return [0, -50, -100, -210, -280];
+        } else if (width >= 768) {
+            return [0, -45, -90, -135, -180];
+        } else if (width < 768) {
+            return [0, -22, -44, -66, -88];
+        } else {
+            return [0, -70, -140, -210, -280];
+        }
+    }
+
+    function updatePosition(index) {
+        const positionValues = getPositionValues();
+        if (index < positionValues.length) {
+            ltoR.style.left = `${positionValues[index]}em`;
+        }
+    }
+
+    // Attach event listeners to each `.box1`
+    options.forEach((option, index) => {
+        option.addEventListener('click', function () {
+            updatePosition(index);
+        });
+    });
+
+    // Update positions on window resize
+    window.addEventListener('resize', function () {
+        updatePosition(0); // Reset position to the first index when resizing
+    });
+});
+
+// services 
