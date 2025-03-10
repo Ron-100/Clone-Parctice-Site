@@ -216,3 +216,90 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // services 
+
+
+
+
+
+// works
+
+
+document.addEventListener('DOMContentLoaded',function(){
+    let tag = document.querySelectorAll('.tags button')
+    if (tag.length > 0) {
+        tag[0].classList.add('active'); // Set the first button as active
+    }
+    tag.forEach(function(btn){
+        btn.addEventListener('click',function(){
+            tag.forEach(function(b){
+                b.classList.remove('active')
+            })
+            this.classList.add('active') // we can do it, it best practice // we do that also btn.classList.add('active'), it not best approch //  
+        })
+
+    });
+
+});
+
+document.addEventListener('DOMContentLoaded',function(){
+    let tag = document.querySelectorAll('.tags button')
+    
+    let img1 = document.querySelector('#imgw1')
+    let img2 = document.querySelector('#imgw2')
+    let img3 = document.querySelector('#imgw3')
+    let img4 = document.querySelector('#imgw4')
+    let img5 = document.querySelector('#imgw5')
+    let img6 = document.querySelector('#imgw6')
+    let img7 = document.querySelector('#imgw7')
+    let img8 = document.querySelector('#imgw8')
+
+    tag[0].addEventListener('click',function(){
+        img1.style.display = 'block'
+        img2.style.display = 'block'
+        img3.style.display = 'block'
+        img4.style.display = 'block'
+        img5.style.display = 'block'
+        img6.style.display = 'block'
+        img7.style.display = 'block'
+        img8.style.display = 'block'
+    })
+
+    tag[1].addEventListener('click',function(){
+        img1.style.display = 'block'
+        img2.style.display = 'block'
+        img3.style.display = 'block'
+        img4.style.display = 'none'
+        img5.style.display = 'none'
+        img6.style.display = 'none'
+        img7.style.display = 'none'
+        img8.style.display = 'none'
+    })
+
+    tag[2].addEventListener('click',function(){
+        img1.style.display = 'none'
+        img2.style.display = 'none'
+        img3.style.display = 'none'
+        img4.style.display = 'flex'
+        img5.style.display = 'flex'
+        img6.style.display = 'flex'
+        img7.style.display = 'none'
+        img8.style.display = 'none'
+    })
+
+    tag[3].addEventListener('click',function(){
+        img1.style.display = 'none'
+        img2.style.display = 'none'
+        img3.style.display = 'none'
+        img4.style.display = 'none'
+        img5.style.display = 'none'
+        img6.style.display = 'none'
+        img7.style.display = 'block'
+        img8.style.display = 'block'
+    })
+
+})
+
+
+
+
+// works
