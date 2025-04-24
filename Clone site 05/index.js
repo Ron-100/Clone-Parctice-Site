@@ -1,25 +1,24 @@
 // hide & scroll navigation start
 
-const header = document.querySelector('.header')
-
-let preScroll = window.scrollY;
-// console.log(preScroll);
-
-
-
-window.addEventListener('scroll', ()=>{
-    let currtScroll = window.scrollY;
-    if(currtScroll > preScroll){
-        header.style.transform = `translateY(-105%)`
-    }else{
-        header.style.transform = `translateY(0%)`
-    }
+document.addEventListener('DOMContentLoaded',function(){
+    const header = document.querySelector('.header')
     
-    preScroll = currtScroll;
+    let preScroll = window.scrollY;
+
+    window.addEventListener('scroll', ()=>{
+        let currtScroll = window.scrollY;
+        if(currtScroll > preScroll){
+            header.style.transform = `translateY(-105%)`
+        }else{
+            header.style.transform = `translateY(0%)`
+        }
+        
+        preScroll = currtScroll;
+    })
+    
 })
 
 // hide & scroll navigation end
-
 
 
 // page marker start
@@ -70,23 +69,27 @@ menubtn.addEventListener('click',function(){
 // manu visibility1.0 end
 
 
-// baner start
+document.addEventListener('DOMContentLoaded',function(){
+    
+    // baner start
 
-const swiper = new Swiper('.swiper', {
-    direction: 'vertical',  // Enable vertical mode
-    loop: true,             // Loop through slides
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },       
-    effect:'fade',
-    autoplay: {
-        delay: 3000,        // Change slide every 3 seconds
-        disableOnInteraction: false, // Keep autoplay after user interaction
-    },
-});
+    const swiper = new Swiper('.swiper', {
+        direction: 'vertical',  // Enable vertical mode
+        loop: true,             // Loop through slides
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },       
+            effect:'fade',
+            autoplay: {
+            delay: 3000,        // Change slide every 3 seconds
+            disableOnInteraction: false, // Keep autoplay after user interaction
+        },
+    });
 
-// baner end
+    // baner end
+
+})
 
 
 

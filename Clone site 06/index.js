@@ -1,16 +1,18 @@
-const header = document.querySelector('.header');
-let Yscrollprev = window.scrollY;
+document.addEventListener('DOMContentLoaded',function(){
+    const header = document.querySelector('.header');
+    let Yscrollprev = window.scrollY;
 
-window.addEventListener('scroll',function(){
-    let Yscrollcurr = window.scrollY;
+    window.addEventListener('scroll',function(){
+        let Yscrollcurr = window.scrollY;
     
-    if (Yscrollcurr > Yscrollprev) {
-        header.style.backgroundColor = 'rgba(0, 0, 0, 0.641)';
-    } else {
-        header.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
-    }
+        if (Yscrollcurr > Yscrollprev) {
+            header.style.backgroundColor = 'rgba(0, 0, 0, 0.641)';
+        } else {
+            header.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
+        }
 
-    Yscrollprev = Yscrollcurr;
+        Yscrollprev = Yscrollcurr;
+    })
 })
 
 
@@ -59,12 +61,10 @@ document.addEventListener('DOMContentLoaded',function(){
         }
 
         if(viewport > 1246){
-            console.log('ok');
             about.classList.add('ani-about')
         } 
 
         if(viewport > 350){
-            console.log('ok');
             cage[0].classList.add('ani-cage')
             cage[1].classList.add('ani-cage')
         }   
