@@ -8,7 +8,7 @@
 #main_body{
     margin: 0 auto;
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,13 +56,12 @@
 
 #container{
     width: 80%;
-    height: 95%;
+    height: auto;
     padding: 1em;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(auto,400px);
     gap: 20px;
-    overflow:auto;
 }
 
 #page1{
@@ -96,4 +95,8 @@
         grid-template-columns: repeat(1,1fr);
         grid-template-rows: repeat(auto,400px);
     }
+}
+
+#container{
+    scrollbar-gutter: stable both-edges;
 }
