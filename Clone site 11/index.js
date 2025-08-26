@@ -241,6 +241,7 @@ canvas()
 //Arrow
 
 
+
 //Product Overview
 document.addEventListener('DOMContentLoaded',function(){
   let productBtn = document.querySelectorAll('.itms')

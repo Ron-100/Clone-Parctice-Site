@@ -151,23 +151,37 @@ canvas{
     border-radius: 50px;
     background-color: white;
     z-index: 99;
+    transition: background-color, 0.5s ;
     cursor: pointer;
 }
 
 #arrow>p{
-    margin-top: 5px;
-    font-size: 25px;
+    margin-left: 5px;
+    margin-top: 2px;
+    font-size: 22px;
+    transform: rotate(90deg);
+    transition: margin-bottom, 0.5s ;
+}
+#arrow:hover p{
+    margin-bottom: -4px;
+}
+#arrow:hover{
+    background-color: #f2f2f2;
 }
 
-#page>h1{
-    font-size: 80px;
+
+#page>#headline{
+    width: 60%;
+    font-size: 50px;
     position: absolute;
     z-index: 99;
-    text-align: center;
     top: 38%;
-    font-weight: 500;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+#page>#headline>h1{
+    text-align: center;
+    font-weight: 500;
 }
 
 #page>h4 {
@@ -250,6 +264,7 @@ canvas{
     width: 100vw;
     background-color: transparent;
 }
+
 
 #page4 {
     display: flex;
@@ -508,3 +523,85 @@ canvas{
 }
 
 
+
+#page6{
+    height: 100vh;
+    width: 100vw;
+    background-color: #121718;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cage6{
+    width: 75%;
+    height: 60%;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+#lside{
+    width: 55%;
+    height: 100%;
+}
+
+#sliceCover{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    transform: translateY(8em);
+}
+
+#slice{
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+    height: 90px;
+    border-radius: 10px;
+    background-color: #121718;
+    color: white;
+}
+
+#slice>#pic{
+    width: 50px;
+    height: 50px;
+}
+#slice>#pic>img{
+    width: 100%;
+    height: 100%;
+}
+#slice>#text{
+    width: 70%;
+}
+
+
+#rside{
+    padding: 0 9em 0 0;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#rside>h1{
+    font-size: 55px;
+    font-weight: 100;
+}
+#rside>p{
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 25px;
+}
