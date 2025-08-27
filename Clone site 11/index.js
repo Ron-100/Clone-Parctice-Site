@@ -239,6 +239,16 @@ function canvas (){
 canvas()
 
 //Arrow
+// const scroll = new LocomotiveScroll({
+//   el: document.querySelector('#main'), // wrapper element
+//   smooth: true
+// });
+// const arrow = document.querySelector("#arrow");
+
+// arrow.addEventListener("click", () => {
+//   scroll.scrollTo("#page1"); // smooth scroll to that section
+// });
+
 
 
 
@@ -323,6 +333,23 @@ document.addEventListener('DOMContentLoaded',function(){
 
 })
 
+//All in One
+document.addEventListener('DOMContentLoaded',function(){
+
+  let tl = gsap.timeline()
+
+  tl.from('#svg7 g',{
+    opacity:0,
+    scale:0,
+    stagger:0.01,
+  },'-=0.2')
+  
+  tl.from('#image7',{
+    opacity:0,
+    scale:0,
+    stagger:0.01,
+  },'-=0.2')
+})
 
 //View screen
 document.addEventListener('DOMContentLoaded',function(){

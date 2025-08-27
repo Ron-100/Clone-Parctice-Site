@@ -6,6 +6,15 @@
     scroll-behavior: smooth;
 }
 
+#cover{
+    margin: 0 auto;
+    width: 1536px;
+    background-color: #E4E0DD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #error{
     width: 100%;
     height: 100vh;
@@ -68,6 +77,7 @@
 html,body{
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 #main{
@@ -171,8 +181,8 @@ canvas{
 
 
 #page>#headline{
-    width: 60%;
-    font-size: 50px;
+    width: 62%;
+    font-size: 52px;
     position: absolute;
     z-index: 99;
     top: 38%;
@@ -182,6 +192,7 @@ canvas{
 #page>#headline>h1{
     text-align: center;
     font-weight: 500;
+    line-height: 90px;
 }
 
 #page>h4 {
@@ -522,9 +533,181 @@ canvas{
     top: 22px;
 }
 
-
-
 #page6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121718;
+    color: white;
+    height: 55vh;
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+}
+#page6>h1{
+    font-size: 6vw;
+    font-weight: 100;
+}
+
+
+
+
+
+
+
+
+
+#page7{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121718;
+}
+
+#cage7{
+    width: 75%;
+    height: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#text7{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 35%;
+    height: 100%;
+    color: white;
+}
+
+#text7>h1{
+    font-size: 60px;
+    font-weight: 100;
+}
+
+#text7>p{
+    font-size: 18px;
+    line-height: 26px;
+}
+
+#svg7{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#page8{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121718;
+}
+
+#cage8{
+    width: 75%;
+    height: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#text8{
+    padding-right: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 45%;
+    height: 100%;
+    color: white;
+}
+
+#text8>h1{
+    font-size: 60px;
+    font-weight: 100;
+}
+
+#text8>p{
+    font-size: 18px;
+    line-height: 26px;
+}
+
+#svg8{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+
+
+
+#page9{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121718;
+}
+
+#cage9{
+    width: 75%;
+    height: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#text9{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 35%;
+    height: 100%;
+    color: white;
+}
+
+#text9>h1{
+    font-size: 60px;
+    font-weight: 100;
+}
+
+#text9>p{
+    font-size: 18px;
+    line-height: 26px;
+}
+
+#svg9{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+#page10{
     height: 100vh;
     width: 100vw;
     background-color: #121718;
@@ -604,4 +787,53 @@ canvas{
     font-size: 18px;
     font-weight: 100;
     line-height: 25px;
+}
+
+
+
+
+#page11{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121718;
+}
+
+#cage11{
+    width: 75%;
+    height: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#text11{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 35%;
+    height: 100%;
+    color: white;
+}
+
+#text11>h1{
+    font-size: 60px;
+    font-weight: 100;
+}
+
+#text11>p{
+    font-size: 18px;
+    line-height: 26px;
+}
+
+#svg11{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
