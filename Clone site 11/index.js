@@ -239,51 +239,50 @@ function canvas (){
 canvas()
 
 //Arrow
-// const scroll = new LocomotiveScroll({
-//   el: document.querySelector('#main'), // wrapper element
-//   smooth: true
-// });
-// const arrow = document.querySelector("#arrow");
+document.addEventListener('DOMContentLoaded',function(){
+  // const scroll = new LocomotiveScroll({
+  // el: document.querySelector('#main'), // wrapper element
+  // smooth: true
+  // });
+  // const arrow = document.querySelector("#arrow");
 
-// arrow.addEventListener("click", () => {
-//   scroll.scrollTo("#page1"); // smooth scroll to that section
-// });
-
-
-
+  // arrow.addEventListener("click", () => {
+  //   scroll.scrollTo("#page1"); // smooth scroll to that section
+  // });
+})
 
 //Product Overview
 document.addEventListener('DOMContentLoaded',function(){
   let productBtn = document.querySelectorAll('.itms')
   let svg = document.querySelectorAll('.svg')
   let proDetail = document.querySelectorAll('.content')
-
+  
   productBtn.forEach((itm, num)=>{
     itm.addEventListener('click',function(){
       
       productBtn.forEach((btn)=> btn.classList.remove('show'))
       svg.forEach((svg)=> svg.classList.remove('watch'))
       proDetail.forEach((para)=> para.classList.remove('conshow'))
-    
+      
       itm.classList.add('show')
       let svgimg = svg[num]
       svgimg.classList.add('watch')
       let activePara = proDetail[num]
       activePara.classList.add('conshow')
-
+      
       soloMove(activePara, svgimg)
     })
   })
-
+  
   // Product Overview Animation
   function soloMove (para, svg){
-
+    
     //SVG
     let gTag = svg.querySelectorAll('g')
     let imgTag = svg.querySelectorAll('image')
     
     let synSvg = gsap.timeline()
-
+    
     synSvg.from(gTag,{
       opacity:0,
       scale:0,
@@ -296,59 +295,42 @@ document.addEventListener('DOMContentLoaded',function(){
       stagger:0.01,
     },'-=0.2')
     
-
-
+    
+    
     // Text Content
     let sync = gsap.timeline()
-
+    
     sync.from(para.querySelector('h1'),{
-        opacity:0,
-        scale:0.8,
-        y:40,  
+      opacity:0,
+      scale:0.8,
+      y:40,  
     })
-
-
-
+    
+    
+    
     let h4 = para.querySelector('h4')
     let h4Lines = h4.innerHTML.split('<br>')
     h4.innerHTML = h4Lines.map((line)=>(`<div class='lines'>${line}</div>`)).join("");
-
+    
+    
     sync.from(h4.querySelectorAll('.lines'),{
-        opacity:0,
-        scale:0.8,
-        y:40,
-        duration:0.5,
-        stagger:0.1,
-        ease:"slow(0.7,0.7,false)" 
-      },'-=0.5')
-      
-      
-      sync.from(para.querySelector('button'),{
-        opacity:0,
-        scale:0.8,
-        y:50,
-        delay:0.2   
+      opacity:0,
+      scale:0.8,
+      y:40,
+      duration:0.5,
+      stagger:0.1,
+      ease:"slow(0.7,0.7,false)" 
+    },'-=0.5')
+    
+    
+    sync.from(para.querySelector('button'),{
+      opacity:0,
+      scale:0.8,
+      y:50,
+      delay:0.2   
     },'-=0.5')
   }
-
-})
-
-//All in One
-document.addEventListener('DOMContentLoaded',function(){
-
-  let tl = gsap.timeline()
-
-  tl.from('#svg7 g',{
-    opacity:0,
-    scale:0,
-    stagger:0.01,
-  },'-=0.2')
   
-  tl.from('#image7',{
-    opacity:0,
-    scale:0,
-    stagger:0.01,
-  },'-=0.2')
 })
 
 //View screen

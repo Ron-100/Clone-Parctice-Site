@@ -78,6 +78,229 @@ document.addEventListener('DOMContentLoaded',function(){
     
 })
 
+//All in One
+document.addEventListener("DOMContentLoaded", () => {
+
+  const imgs = document.querySelectorAll("#svg7 image");
+  const svg = document.querySelectorAll("#svg7 g");
+  const word = document.querySelectorAll("#svg7 text");
+  
+  let cap = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#svg7',
+      scroller: '#main',
+      start: "top 80%", 
+      end: "bottom 0%",  
+      // markers: true 
+    }
+  });
+
+  cap.from(svg, {
+    opacity: 0,  
+    scale:0,          
+    duration: 0.5,
+    stagger: 0.01,     
+  });
+
+  cap.from(imgs, {
+    opacity: 0,  
+    scale:0,          
+    duration: 0.5,
+    stagger: 0.01,     
+  },'0.4');
+
+
+  cap.from(word, {
+    opacity: 0, 
+    duration:0.05, 
+    repeat:-1,  
+    yoyo:true, 
+    stagger: 0.01,     
+  },'0.9');
+
+  
+  // text Animation
+  let cop = gsap.timeline({
+      scrollTrigger: {
+      trigger: '#cage7',
+      scroller: '#main',
+      start: "top 80%", 
+      end: "bottom 0%",  
+      // markers: true 
+    }
+  })
+    
+  cop.from("#text7 h1",{
+    opacity:0,
+    scale:0.8,
+    y:40,  
+  })
+  
+  
+  let p = document.querySelector('#para')
+  let pLines = p.innerHTML.split('<br>')
+  p.innerHTML = pLines.map((line)=>(`<p class='lines'>${line}</p>`)).join("");
+  
+  
+  cop.from(p.querySelectorAll('.lines'),{
+    opacity:0,
+    scale:0.8,
+    y:40,
+    duration:0.5,
+    stagger:0.1,
+    ease:"slow(0.7,0.7,false)" 
+  },'-=0.5')
+  
+});
+
+//Easy to use
+document.addEventListener("DOMContentLoaded", () => {
+
+  const imgs = document.querySelectorAll("#svg8 image");
+  const svg = document.querySelectorAll("#svg8 g");
+  const word = document.querySelectorAll("#svg8 text");
+  
+  let cap = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#svg8',
+      scroller: '#main',
+      start: "top 80%", 
+      end: "bottom 0%",  
+      // markers: true 
+    }
+  });
+
+  cap.from(svg, {
+    opacity: 0,  
+    scale:0,          
+    duration: 0.5,
+    stagger: 0.01,     
+  });
+
+  cap.from(imgs, {
+    opacity: 0,  
+    scale:0,          
+    duration: 0.5,
+    stagger: 0.01,     
+  },'0.4');
+
+
+  cap.from(word, {
+    opacity: 0, 
+    duration:0.05, 
+    repeat:-1,  
+    yoyo:true, 
+    stagger: 0.01,     
+  },'0.9');
+
+
+  // text Animation
+  let cop = gsap.timeline({
+      scrollTrigger: {
+      trigger: '#cage8',
+      scroller: '#main',
+      start: "top 80%", 
+      end: "bottom 0%",  
+      // markers: true 
+    }
+  })
+    
+  cop.from("#text8 h1",{
+    opacity:0,
+    scale:0.8,
+    y:40,  
+  })
+  
+  
+  let p = document.querySelector('#text8 p')
+  let pLines = p.innerHTML.split('<br>')
+  p.innerHTML = pLines.map((line)=>(`<p class='lines'>${line}</p>`)).join("");
+  
+  
+  cop.from(p.querySelectorAll('.lines'),{
+    opacity:0,
+    scale:0.8,
+    y:40,
+    duration:0.5,
+    stagger:0.1,
+    ease:"slow(0.7,0.7,false)" 
+  },'-=0.5')
+});
+
+//Dedicated support
+document.addEventListener("DOMContentLoaded", () => {
+
+  const imgs = document.querySelectorAll("#svg9 image");
+  const svg = document.querySelectorAll("#svg9 g");
+  const word = document.querySelectorAll("#svg9 text");
+  
+  let cap = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#svg9',
+      scroller: '#main',
+      start: "top 80%", 
+      end: "bottom 0%",  
+      // markers: true 
+    }
+  });
+
+  cap.from(svg, {
+    opacity: 0,  
+    scale:0,          
+    duration: 0.5,
+    stagger: 0.01,     
+  });
+
+  cap.from(imgs, {
+    opacity: 0,  
+    scale:0,          
+    duration: 0.5,
+    stagger: 0.01,     
+  },'0.4');
+
+
+  cap.from(word, {
+    opacity: 0, 
+    duration:0.5, 
+    repeat:-1,  
+    yoyo:true, 
+    stagger: 0.01,     
+  },'0.9');
+
+  // Text Animation
+  let cop = gsap.timeline({
+      scrollTrigger: {
+      trigger: '#cage9',
+      scroller: '#main',
+      start: "top 80%", 
+      end: "bottom 0%",  
+      // markers: true 
+    }
+  })
+    
+  cop.from("#text9 h1",{
+    opacity:0,
+    scale:0.8,
+    y:40,  
+  })
+  
+  
+  let p = document.querySelector('#text9 p')
+  let pLines = p.innerHTML.split('<br>')
+  p.innerHTML = pLines.map((line)=>(`<p class='lines'>${line}</p>`)).join("");
+  
+  
+  cop.from(p.querySelectorAll('.lines'),{
+    opacity:0,
+    scale:0.8,
+    y:40,
+    duration:0.5,
+    stagger:0.1,
+    ease:"slow(0.7,0.7,false)" 
+  },'-=0.5')
+
+});
+
 //Data-driven Section :-
 document.addEventListener('DOMContentLoaded',function(){
   
@@ -108,6 +331,117 @@ document.addEventListener('DOMContentLoaded',function(){
       end:'top 10%'
     }
   })
+
+
+
+
+  // text Animation
+  let cop = gsap.timeline({
+      scrollTrigger: {
+      trigger: '#sliceCover',
+      scroller: '#main',
+      start: "top 80%", 
+      end: "bottom 0%",  
+      // markers: true 
+    }
+  })
+    
+
+  cop.from("#rside h1",{
+    opacity:0,
+    scale:0.8,
+    y:40,  
+  })
+  
+  
+  let p = document.querySelector('#rside p')
+  let pLines = p.innerHTML.split('<br>')
+  p.innerHTML = pLines.map((line)=>(`<p class='lines'>${line}</p>`)).join("");
+  
+  
+  cop.from(p.querySelectorAll('.lines'),{
+    opacity:0,
+    scale:0.8,
+    y:40,
+    duration:0.5,
+    stagger:0.1,
+    ease:"slow(0.7,0.7,false)" 
+  },'-=0.5')
 })
+
+//Simple
+document.addEventListener("DOMContentLoaded", () => {
+
+  const imgs = document.querySelectorAll("#svg11 image");
+  const svg = document.querySelectorAll("#svg11 g");
+  const word = document.querySelectorAll("#svg11 text");
+  
+  let cap = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#svg11',
+      scroller: '#main',
+      start: "top 80%", 
+      end: "bottom 0%",  
+      // markers: true 
+    }
+  });
+
+  cap.from(svg, {
+    opacity: 0,  
+    scale:0,          
+    duration: 0.5,
+    stagger: 0.01,     
+  });
+
+  cap.from(imgs, {
+    opacity: 0,  
+    scale:0,          
+    duration: 0.5,
+    stagger: 0.01,     
+  },'0.4');
+
+
+  cap.from(word, {
+    opacity: 0,
+    duration:4, 
+    repeat:-1,  
+    yoyo:true, 
+    stagger: 0.01,     
+  },'0.9');
+
+  // text Animation
+  let cop = gsap.timeline({
+      scrollTrigger: {
+      trigger: '#cage11',
+      scroller: '#main',
+      start: "top 80%", 
+      end: "bottom 0%",  
+      // markers: true 
+    }
+  })
+    
+  cop.from("#text11 h1",{
+    opacity:0,
+    scale:0.8,
+    y:40,  
+  })
+  
+  
+  let p = document.querySelector('#text11 p')
+  let pLines = p.innerHTML.split('<br>')
+  p.innerHTML = pLines.map((line)=>(`<p class='lines'>${line}</p>`)).join("");
+  
+  
+  cop.from(p.querySelectorAll('.lines'),{
+    opacity:0,
+    scale:0.8,
+    y:40,
+    duration:0.5,
+    stagger:0.1,
+    ease:"slow(0.7,0.7,false)" 
+  },'-=0.5')
+
+});
+
 
 
