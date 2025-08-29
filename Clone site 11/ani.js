@@ -345,8 +345,8 @@ document.addEventListener('DOMContentLoaded',function(){
       // markers: true 
     }
   })
-    
-
+  
+  
   cop.from("#rside h1",{
     opacity:0,
     scale:0.8,
@@ -371,7 +371,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 //Simple
 document.addEventListener("DOMContentLoaded", () => {
-
+  
   const imgs = document.querySelectorAll("#svg11 image");
   const svg = document.querySelectorAll("#svg11 g");
   const word = document.querySelectorAll("#svg11 text");
@@ -443,5 +443,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+//Footer
+document.addEventListener('DOMContentLoaded',function(){
 
-
+  gsap.to('#page12',{
+    yPercent: -100.2,
+    scrollTrigger:{
+      trigger:'#page12',
+      scroller:'#main',
+      scrub:1,
+      // markers:true,
+      start:'top 100%',
+      end:'top 0%'
+    }
+  })
+})
