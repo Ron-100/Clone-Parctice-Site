@@ -136,6 +136,109 @@ html,body{
     font-size: 16px;
 }
 
+
+
+#center-nav a:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+#center-nav a:nth-child(2) p{
+    transform: rotate(90deg);
+    transition: all 0.2s;
+}
+#center-nav a:nth-child(2):hover p{
+    transform: rotate(270deg);
+}
+
+
+#ressub{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+    top: 68px;
+    left: -25px;
+    width: 600px;
+    height: 240px;
+    border-radius: 12px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    background-color: white;
+    padding: 40px 25px 40px 25px;
+}
+
+
+#leftbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    width: 45%;
+    height: 100%;
+}
+
+#leftbar a{
+    text-decoration: none;
+    color: black;
+    transition: color, 0.2s;
+}
+
+#leftbar a:hover{
+    color: rgb(48, 48, 48);
+}
+
+
+
+#rightbar{
+    width: 55%;
+    height: 100%;
+}
+
+#img1{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all, 0.4s;
+}
+
+#img1:hover{
+    transform: scale(1.02);
+}
+
+#pic{
+    overflow: hidden;
+    width: 100px;
+    height: 62px;
+    border-radius: 10px;
+} 
+
+#pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#let{
+    width: 80%;
+}
+
+#let p:nth-child(1){
+    font-size: 12.5px;
+    color: #444444;
+}
+#let p:nth-child(2){
+    font-size: 14px;
+}
+
+
 canvas{
     position: relative;
     height: 100vh;
