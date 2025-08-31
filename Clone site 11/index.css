@@ -127,6 +127,8 @@ html,body{
 
 #center-nav{
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 1.8em;
 }
 
@@ -139,7 +141,9 @@ html,body{
 
 /* dropdown */
 #dropdown {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
