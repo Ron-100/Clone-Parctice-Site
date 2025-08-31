@@ -353,3 +353,4 @@ document.addEventListener('DOMContentLoaded',function(){
   // Run again on resize
   window.addEventListener('resize', checkScreen);
 })
+

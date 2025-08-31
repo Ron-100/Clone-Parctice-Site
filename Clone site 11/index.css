@@ -137,38 +137,48 @@ html,body{
 }
 
 
+/* dropdown */
+#dropdown {
+    display: inline-block;
+    position: relative;
+}
 
-#center-nav a:nth-child(2){
+#dropdown>a{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    color: black;
     gap: 8px;
     position: relative;
 }
 
-#center-nav a:nth-child(2) p{
+#dropdown>a p{
     transform: rotate(90deg);
     transition: all 0.2s;
 }
-#center-nav a:nth-child(2):hover p{
+#dropdown:hover > a p{
     transform: rotate(270deg);
 }
 
 
 #ressub{
-    display: none;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     position: absolute;
-    top: 68px;
-    left: -25px;
+    top: 240%;
+    left: -217%;
     width: 600px;
     height: 240px;
     border-radius: 12px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     background-color: white;
     padding: 40px 25px 40px 25px;
+    transform: scale(0.8);
 }
 
 
@@ -188,7 +198,7 @@ html,body{
 }
 
 #leftbar a:hover{
-    color: rgb(48, 48, 48);
+    color: rgb(77, 77, 77);
 }
 
 
@@ -237,6 +247,10 @@ html,body{
 #let p:nth-child(2){
     font-size: 14px;
 }
+
+/* dropdown */
+
+
 
 
 canvas{

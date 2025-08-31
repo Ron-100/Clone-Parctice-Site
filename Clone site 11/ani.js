@@ -1,42 +1,69 @@
 //Nav
 document.addEventListener('DOMContentLoaded',function(){
-    let syn = gsap.timeline()
-    
-    syn.from('#nav',{
-        opacity:0,
-        y:-50,
-        duration:0.5
-    })
-    
-    let h1 = document.querySelector('#page>#headline>h1')
-    let h1Lines = h1.innerHTML.split('<br>') 
-    h1.innerHTML = h1Lines.map((line)=> (`<div class='h1lines'>${line}</div>`)).join("")
+  let syn = gsap.timeline()
+  
+  syn.from('#nav',{
+      opacity:0,
+      y:-50,
+      duration:0.5
+  })
+  
+  let h1 = document.querySelector('#page>#headline>h1')
+  let h1Lines = h1.innerHTML.split('<br>') 
+  h1.innerHTML = h1Lines.map((line)=> (`<div class='h1lines'>${line}</div>`)).join("")
 
-    syn.from('#page>#headline>h1 .h1lines',{
-        opacity:0,
-        scale:0.9,
-        y:100,
-        duration:1,
-        stagger:0.2,
-        ease: "circ.out",
-    },)
-    
-    syn.from('#page>h4',{
-        opacity:0,
-        scale:0.9,
-        y:100,
-        duration:1,
-        ease: "circ.out",
-      },'-=0.8')
-      
-      syn.from('canvas',{
-        opacity:0,
-        y:100,
-        duration:1,
-        ease: "circ.out",
+  syn.from('#page>#headline>h1 .h1lines',{
+      opacity:0,
+      scale:0.9,
+      y:100,
+      duration:1,
+      stagger:0.2,
+      ease: "circ.out",
+  },)
+  
+  syn.from('#page>h4',{
+      opacity:0,
+      scale:0.9,
+      y:100,
+      duration:1,
+      ease: "circ.out",
     },'-=0.8')
+    
+    syn.from('canvas',{
+      opacity:0,
+      y:100,
+      duration:1,
+      ease: "circ.out",
+  },'-=0.8')
+})
+// Nav Dropdown
+document.addEventListener('DOMContentLoaded',function(){
+  let resources = document.querySelector('#dropdown')
+  let ressub = document.querySelector('#ressub')
+  let cover;
+  resources.addEventListener('mouseenter',function(){
+    clearTimeout(cover)
+    gsap.to(ressub,{
+      visibility:'visible',
+      opacity:1,
+      scale:1,
+    })
+  })
+  
+  resources.addEventListener('mouseleave',function(){ 
+    // delay hiding so user has time to move through gap
+    cover = setTimeout(()=>{
+      gsap.to(ressub,{
+        visibility:'hidden',
+        opacity:0,
+        scale:0.8
+      })
+    },150)
+  })
+
 })
 
+  
 //Arrow
 document.addEventListener('DOMContentLoaded',function(){
   let arrow = document.querySelector('#arrow')
