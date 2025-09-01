@@ -37,6 +37,33 @@ document.addEventListener('DOMContentLoaded',function(){
   },'-=0.8')
 })
 // Nav Dropdown
+// Product
+document.addEventListener('DOMContentLoaded',function(){
+  let resources = document.querySelector('#dropdownd')
+  let ressub = document.querySelector('#prod')
+  let cover;
+  resources.addEventListener('mouseenter',function(){
+    clearTimeout(cover)
+    gsap.to(ressub,{
+      visibility:'visible',
+      opacity:1,
+      scale:1,
+    })
+  })
+  
+  resources.addEventListener('mouseleave',function(){ 
+    // delay hiding so user has time to move through gap
+    cover = setTimeout(()=>{
+      gsap.to(ressub,{
+        visibility:'hidden',
+        opacity:0,
+        scale:0.8
+      })
+    },150)
+  })
+
+})
+// Resources
 document.addEventListener('DOMContentLoaded',function(){
   let resources = document.querySelector('#dropdown')
   let ressub = document.querySelector('#ressub')
