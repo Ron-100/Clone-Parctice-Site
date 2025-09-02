@@ -237,6 +237,21 @@ function canvas (){
   });
 }
 canvas()
+//Nav Route
+document.addEventListener('DOMContentLoaded',function(){
+  // fetch('nav.html')
+  // .then((res)=> res.text())
+  // .then(data => {
+  //   document.getElementById("nav-container").innerHTML = data;
+    
+  //   gsap.from("#nav", {
+  //     y: -100,
+  //     opacity: 0,
+  //     duration: 1,
+  //     ease: "power2.out"
+  //   });
+  // })
+})
 
 //Arrow
 document.addEventListener('DOMContentLoaded',function(){
